@@ -21,7 +21,9 @@ import com.eriwen.gradle.css.ResourceUtil
 import com.eriwen.gradle.css.RhinoExec
 import org.gradle.api.tasks.SourceTask
 import org.gradle.api.tasks.OutputFile
+import org.gradle.api.tasks.CacheableTask
 
+@CacheableTask
 class CssLintTask extends SourceTask {
     private static final String CSSLINT_PATH = 'csslint-rhino.js'
     private static final String TMP_DIR = "tmp${File.separator}css"
